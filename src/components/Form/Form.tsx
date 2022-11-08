@@ -1,9 +1,9 @@
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 import { FC, useState } from "react";
 import "./Form.scss";
 
 type FormProps = {
-  handleTextAdd: any;
+  handleTextAdd: Function;
 };
 
 const Form: FC<FormProps> = ({ handleTextAdd }) => {

@@ -18,3 +18,18 @@
   cursor: text;
   background-color: rgb(107, 107, 107);
 }
+
+.app__del {
+  margin-top: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: rgb(255, 66, 45);
+  border-radius: 5px;
+  padding: 5px 15px;
+  color: rgb(255, 255, 255);
+}
+
+.app__del:disabled {
+  cursor: text;
+  background-color: rgb(107, 107, 107);
+}

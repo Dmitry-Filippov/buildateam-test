@@ -3,7 +3,7 @@ import Canvas from "../Canvas/Canvas";
 import Form from "../Form/Form";
 import "./App.css";
 
-type Text = {
+export type Text = {
   id: string;
   text: string;
   x: number;
@@ -30,6 +30,17 @@ function App() {
     setTextsArr(newArr);
   }
 
+  function handleTextDel() {
+    const newArr = textsArr.slice();
+    newArr.forEach((item, i) => {
+      if (item.id === selectedId) {
+        newArr.splice(i, 1);
+      }
+    });
+    setTextsArr(newArr);
+    selectShape(null);
+  }
+
   return (
     <div className="app">
       <Canvas
@@ -39,15 +50,25 @@ function App() {
         selectedId={selectedId}
       />
       <Form handleTextAdd={handleTextAdd} />
-      <button className="app__save"
-        onClick={() => {
-          const uri = stageRef.current.toDataURL();
-          downloadURI(uri, "stage.png");
-        }}
-        disabled={!textsArr[0]}
-      >
-        Cохранить как png
-      </button>
+      <div>
+        <button
+          className="app__save"
+          onClick={() => {
+            const uri = stageRef.current.toDataURL();
+            downloadURI(uri, "stage.png");
+          }}
+          disabled={!textsArr[0]}
+        >
+          Cохранить как png
+        </button>
+        <button
+          className="app__del"
+          disabled={!selectedId}
+          onClick={handleTextDel}
+        >
+          Удалить выбранный текст
+        </button>
+      </div>
     </div>
   );
 }

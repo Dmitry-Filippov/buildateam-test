@@ -1,11 +1,12 @@
 import { FC } from "react";
 import { Layer, Stage } from "react-konva";
+import { Text } from "../App/App";
 import TextItem from "../TextItem/TextItem";
 import "./Canvas.css";
 
 type CanvasProps = {
   selectShape: Function;
-  textsArr: any;
+  textsArr: Text[];
   selectedId: number | null;
   stageRef: any;
 };
