@@ -7,12 +7,19 @@ type CanvasProps = {
   selectShape: Function;
   textsArr: any;
   selectedId: number | null;
+  stageRef: any;
 };
 
-const Canvas: FC<CanvasProps> = ({ selectShape, textsArr, selectedId }) => {
+const Canvas: FC<CanvasProps> = ({
+  selectShape,
+  textsArr,
+  selectedId,
+  stageRef,
+}) => {
   return (
     <div className="canvas">
       <Stage
+        ref={stageRef}
         width={window.innerWidth - 60}
         height={window.innerHeight - 200}
         onClick={(e: any) => {
