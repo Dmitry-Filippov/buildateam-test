@@ -1,6 +1,7 @@
 {
   "name": "buildateam-test",
   "version": "0.1.0",
+  "homepage": "https://dmitry-filippov.github.io/buildateam-test/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -47,6 +48,7 @@
     ]
   },
   "devDependencies": {
-    "@types/uuid": "^8.3.4"
+    "@types/uuid": "^8.3.4",
+    "gh-pages": "^4.0.0"
   }
 }
