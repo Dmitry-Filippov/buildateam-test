@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/buildateam-test/static/css/main.5a00512f.css",
+    "main.js": "/buildateam-test/static/js/main.95244f18.js",
+    "index.html": "/buildateam-test/index.html",
+    "main.5a00512f.css.map": "/buildateam-test/static/css/main.5a00512f.css.map",
+    "main.95244f18.js.map": "/buildateam-test/static/js/main.95244f18.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a00512f.css",
+    "static/js/main.95244f18.js"
+  ]
+}
